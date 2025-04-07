@@ -1,1 +1,308 @@
 
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Montserrat:wght@400;700&display=swap');
+
+/* General Page Settings */
+
+
+/* Centered Container */
+.container {
+    /* Sets maximum width for central content and centers it */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Header Styling */
+h1, h2, h3, h4, h5, h6 {
+    /* Applies styles to all headings */
+    font-family: 'Montserrat', sans-serif; /* Heading font */
+    font-weight: 700;
+    color: rgba(0, 0, 0, 0.728); /* Heading text color */
+    letter-spacing: 0.8px;
+}
+
+.animated-text {
+    /* Controls the appearance of the main animated heading */
+    font-size: 2rem; /* Adjust size of main heading */
+    color:rgba(0, 0, 0, 0.742);
+    animation: fadeIn 1s ease-in-out;
+}
+
+.animated-subtitle {
+    /* Controls subtitle styling below main heading */
+    font-size: 1.5rem; /* Adjust size of subtitle */
+    color: rgba(0, 0, 0, 0.728);
+    margin-top: 10px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Login and Register Subheadings */
+.subheader {
+    /* Applies styles to subheadings in login/register forms */
+    font-size: 1.5rem;
+    color: #00a676; /* Color of subheadings */
+    margin-bottom: 15px;
+}
+
+/* Button Styling */
+button, .stButton button {
+    /* General button appearance settings */
+    background-color: rgb(31, 64, 94); /* Background color for buttons */
+    color: white; /* Button text color */
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px; /* Adjusts button roundness */
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif; /* Button font */
+    font-size: 14px; /* Button font size */
+    font-weight: 600;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Subtle shadow for readability */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Adds smooth hover effect */
+    margin-top: 12px;
+}
+
+button:hover {
+    /* Hover effect for buttons */
+    background-color: rgba(0, 0, 0, 0.324); /* Button color on hover */
+    transform: scale(1.05); /* Zoom-in effect on hover */
+}
+
+button:active {
+    /* Active (pressed) state for buttons */
+    background-color: white;
+}
+
+button#logout_button {
+    /* Specific styling for the logout button to fix it at the bottom center */
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* File Uploader Styling */
+.stFileUploader {
+    /* Adds margin above the file uploader component */
+    margin-top: 20px;
+    color: #bfd9d9; /* File uploader text color */
+}
+
+/* Input Fields and Text Areas */
+input[type="text"], input[type="password"], input[type="email"], .stDateInput input, textarea {
+    /* Controls appearance of text inputs and text areas */
+    background-color: white; /* Input background color */
+    color: rgba(0, 0, 0, 0.743); /* Text color inside inputs */
+    border: 1px solid black;
+    border-radius: 10px; /* Input roundness */
+    padding: 10px;
+    width: 100%; /* Sets inputs to full width */
+    font-family: 'Lato', sans-serif;
+}
+
+input[type="file"] {
+    /* Style for file upload input */
+    color: #c4caca; /* File uploader text color */
+}
+
+/* Links */
+a {
+    /* Basic styling for all links */
+    color: #00a676; /* Link color */
+    text-decoration: none;
+    transition: color 0.3s ease; /* Smooth transition for color change */
+    font-family: 'Montserrat', sans-serif;
+}
+
+a:hover {
+    /* Hover effect for links */
+    color: #00875a; /* Link color on hover */
+}
+
+/* Fade-In Animation for Text */
+@keyframes fadeIn {
+    /* Animation effect for text fade-in */
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Background Image Settings */
+.stApp {
+    /* Controls the background image properties */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow: hidden; /* Prevents scrolling issues */
+}
+
+/* Identified Ingredients Section */
+.identified-ingredients {
+    /* Style for the identified ingredients display */
+    font-size: 1.1rem; /* Font size for ingredient list */
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.728); /* Ingredient text color */
+    margin: 20px 0;
+}
+
+/* Recipe Display */
+.generated-recipe-title {
+    /* Style for the title of generated recipes */
+    font-size: 2rem; /* Recipe title font size */
+    font-weight: bold;
+    color: #00a676; /* Recipe title color */
+    margin-top: 20px;
+}
+
+.generated-recipe {
+    /* Style for the content of the generated recipe */
+    color: #a1cac9; /* Recipe text color */
+    font-size: 1rem; /* Font size for recipe content */
+    line-height: 1.6; /* Line height for readability */
+}
+
+/* Custom Styling for Form Labels (e.g., Username, Password) */
+.form-subheading {
+    /* Styling specifically for form labels */
+    font-size: 1.5rem; /* Label font size */
+    color: #00a676; /* Label text color */
+    margin-bottom: 10px;
+}
+/* General Styling for Form Labels (e.g., "Username" and "Password") */
+.stTextInput label {
+    font-family: 'Montserrat', sans-serif; /* Ensures consistent font with the rest of the site */
+    font-size: 18px; /* Medium size for visibility */
+    font-weight: bold; /* Bold text for emphasis */
+    color: rgba(0, 0, 0, 0.728); /* Light color for contrast on dark backgrounds */
+    margin-bottom: 6px; /* Space between label and input box */
+    text-align: left; /* Aligns text to the left for a clean form structure */
+}
+/* Styling for Profile Picture label */
+label[for="profile_picture"] {
+    font-family: 'Montserrat', sans-serif; /* Consistent font with other labels */
+    font-size: 20px; /* Larger font size for clarity */
+    font-weight: 600; /* Bold weight for emphasis */
+    color: #ff6699; /* Light pink for a unique touch */
+    margin-bottom: 8px; /* Space below label */
+    display: block; /* Ensure label is above the input field */
+    text-align: left; /* Align text to the left */
+}
+
+/* Styling for Date of Birth label */
+/* Styling for Profile Picture Uploader */
+.stFileUploader {
+    margin-top: 20px; /* Space between the elements */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.stFileUploader label {
+    font-family: 'Montserrat', sans-serif; /* Consistent font with other labels */
+    font-size: 20px; /* Larger font size for clarity */
+    font-weight: 600; /* Bold weight for emphasis */
+    color: rgba(0, 0, 0, 0.728); /* Light pink for the profile picture */
+    margin-bottom: 8px; /* Space below the label */
+    display: block; /* Ensure the label is above the input field */
+    text-align: left; /* Align text to the left */
+}
+
+/* Styling for the Date of Birth Input */
+.stDateInput {
+    margin-top: 20px; /* Space between elements */
+}
+
+.stDateInput label {
+    font-family: 'Montserrat', sans-serif; /* Consistent font with other labels */
+    font-size: 20px; /* Larger font size for clarity */
+    font-weight: 600; /* Bold weight for emphasis */
+    color: rgba(0, 0, 0, 0.728); /* Light blue color for Date of Birth */
+    margin-bottom: 8px; /* Space below the label */
+    display: block; /* Ensure label is above the input field */
+    text-align: left; /* Align text to the left */
+}
+
+/* Styling for the file input button to match other buttons */
+input[type="file"] {
+    background-color: #021022d4; /* Soft green */
+    color: #ffffff;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 12px;
+    width: 100%;
+}
+
+input[type="file"]:hover {
+    background-color: rgba(0, 0, 0, 0.728); /* Light green on hover */
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+input[type="file"]:active {
+    background-color: rgba(0, 0, 0, 0.728); /* Active state */
+}
+
+/* Styling for the date input field */
+input[type="date"] {
+    background-color: #12020219; /* Darker background */
+    color: #ffffff; /* Lighter text */
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    font-family: 'Lato', sans-serif;
+    width: 100%; /* Full-width input field */
+}
+
+/* Styling for Diet Preference Radio Buttons */
+.stRadio {
+    font-family: 'Montserrat', sans-serif; /* Consistent font with other labels */
+    font-size: 20px; /* Larger font size for clarity */
+    font-weight: 600; /* Bold weight for emphasis */
+    color: #66ccff; /* Light blue color for Diet Preference */
+    margin-bottom: 12px; /* Space below the radio buttons */
+}
+
+.stRadio label {
+    margin-right: 15px; /* Space between radio buttons */
+    font-size: 18px; /* Slightly smaller text for radio labels */
+    color: #ffffff; /* White color for contrast */
+}
+
+.stRadio input[type="radio"] {
+    margin-right: 5px; /* Space between radio button and label */
+}
+
+/* Styling for the file upload instructions (like 200MB limit and file types) */
+.stFileInstructions {
+    font-family: 'Montserrat', sans-serif; /* Consistent font */
+    font-size: 16px; /* Regular size for instructions */
+    color: #ffd700; /* Gold color for visibility */
+    margin-top: 10px; /* Space above the text */
+    margin-bottom: 20px; /* Space below the text */
+    text-align: left; /* Align the instructions to the left */
+}
+
+/* Styling for Identified Ingredients Section */
+.stIngredientsSection {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    color: #ff6600; /* Orange color to highlight ingredients section */
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.stIngredientsSection p {
+    color: #ffffff; /* Light color for readability */
+    font-weight: 500;
+}
+
+.stIngredientsSection span {
+    font-weight: 700; /* Highlighted text for identified ingredients */
+    color: #00cc66; /* Green to emphasize success */
+}
