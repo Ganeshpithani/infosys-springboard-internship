@@ -1,0 +1,11 @@
+torch 
+torchvision 
+transformers
+streamlit 
+opencv-python-headless 
+easyocr 
+pytesseract 
+psycopg2-binary 
+openai 
+numpy 
+pandas
